@@ -74,6 +74,7 @@ app.controller('MainCtrl', [
     $rootScope.$on('newMail', function (e, newEmail) {
       // update model
       $scope.items.push(newEmail)
+      $rootScope.$emit('Refresh')
       countUnread()
 
       // update DOM at most 5 times per second
